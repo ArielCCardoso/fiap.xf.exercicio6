@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fiap.Xamarin.Exercicio6.View.LoginView"
+             x:Name="pageLogin"
+             Title="Bem Vindo">
+
+    <!--ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+    </-->
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Login" />
+            <Entry x:Name="login" Placeholder="seulogin" />
+            <Label Text="Senha" />
+            <Entry x:Name="senha" IsPassword="true" Placeholder="senha" />
+            <Button Text="Entrar" Clicked="OnEntrarButtonClicked" />
+            <Label x:Name="entrar" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
