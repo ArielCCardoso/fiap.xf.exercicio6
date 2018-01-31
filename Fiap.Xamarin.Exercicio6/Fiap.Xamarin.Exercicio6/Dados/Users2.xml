@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+  <User login="RM31993" email="RM31993@fiap.com.br" senha="rm31993" />
+  <User login="admin" email="admin@local" senha="admin"/>
+</Users>

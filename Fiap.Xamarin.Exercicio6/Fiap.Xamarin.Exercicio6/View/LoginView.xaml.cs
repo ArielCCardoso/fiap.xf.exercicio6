@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Fiap.Xamarin.Exercicio6.Model;
+using Fiap.Xamarin.Exercicio6.ViewModel;
 
 namespace Fiap.Xamarin.Exercicio6.View
 {
@@ -24,13 +25,16 @@ namespace Fiap.Xamarin.Exercicio6.View
 
         async void OnEntrarButtonClicked(object sender, EventArgs e)
         {
-            var user = new Login
+            LoginViewModel loginVM = new LoginViewModel();
+
+            var _login = new Login
             {
-                Username = login.Text,
-                Password = senha.Text
+                login = login.Text,
+                senha = senha.Text
             };
 
-            var isValid = AreCredentialsCorrect(user);
+            //var isValid = AreCredentialsCorrect(user);
+            var isValid = loginVM.ValidaLogin(_login);
             if (isValid)
             {
                 //App.IsUserLoggedIn = true;
@@ -51,7 +55,7 @@ namespace Fiap.Xamarin.Exercicio6.View
 
         bool AreCredentialsCorrect(Login user)
         {
-            return user.Username == "ariel" && user.Password == "1234";
+            return user.login == "ariel" && user.senha == "1234";
         }
     }
 }
